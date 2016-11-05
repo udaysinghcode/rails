@@ -2,6 +2,7 @@ FROM convox/ruby
 
 RUN apt-get -yy install libmysqld-dev libpq-dev libsqlite3-dev
 RUN apt-get -yy install nginx nodejs
+RUN apt-get -yy install imagemagick 
 
 ENV PORT 5000
 
