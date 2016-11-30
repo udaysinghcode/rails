@@ -7,4 +7,4 @@ rm -f /app/tmp/pids/server.pid
 nginx &
 
 # start rails listening on 0.0.0.0:$PORT
-bundle exec unicorn -p $PORT -c ./config/unicorn.rb
+bundle exec rails server -b 0.0.0.0 -p $PORT
