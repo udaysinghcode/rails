@@ -5,7 +5,7 @@ RUN apt-get -yy install file
 RUN apt-get -yy install nginx nodejs
 RUN apt-get -yy install imagemagick 
 
-ENV PORT 5000
+ENV PORT 3000
 
 COPY bin/web /app/bin/web
 COPY conf/convox.rb /app/config/initializers/convox.rb

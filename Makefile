@@ -1,5 +1,5 @@
 build:
-	docker build -t udaysinghcode/rails:0.0.1 .
+	docker build -t udaysinghcode/rails:0.0.2 .
 
 debug:
 	docker run -i -t --entrypoint=sh udaysinghcode/rails

@@ -2,3 +2,9 @@
 
 # delete old server.pid
 rm -f /app/tmp/pids/server.pid
+
+# start up nginx in the background
+nginx &
+
+# start rails listening on 0.0.0.0:$PORT
+bundle exec unicorn -p 0.0.0.0:$PORT -c ./config/unicorn.rb
