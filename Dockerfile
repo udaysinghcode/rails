@@ -9,6 +9,7 @@ RUN apt-get update && apt-get -yy install apt-transport-https ca-certificates
 RUN sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger xenial main > /etc/apt/sources.list.d/passenger.list' && apt-get update
 RUN apt-get install -y nginx-extras passenger
 RUN apt-get install -yy wget curl
+RUN apt-get install -yy libcurl4-openssl-dev
 
 ENV PORT 3000
 
