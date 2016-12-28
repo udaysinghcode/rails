@@ -10,6 +10,7 @@ RUN sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger xeni
 RUN apt-get install -y nginx-extras passenger
 RUN apt-get install -yy wget curl
 RUN apt-get install -yy libcurl4-openssl-dev
+RUN apt-get install -yy libpcre3-dev
 
 ENV PORT 3000
 
