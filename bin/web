@@ -2,6 +2,7 @@
 
 # restart nginx
 service nginx restart
+passenger-config compile-nginx-engine
 
 # start passenger
 
