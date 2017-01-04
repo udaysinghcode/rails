@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# restart nginx
-service nginx restart
-passenger-config compile-nginx-engine
-
 # start passenger
 
 bundle exec passenger start -p $PORT --max-pool-size 3

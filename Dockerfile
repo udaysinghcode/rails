@@ -11,11 +11,12 @@ RUN apt-get install -y nginx-extras passenger
 RUN apt-get install -yy wget curl
 RUN apt-get install -yy libcurl4-openssl-dev
 RUN apt-get install -yy libpcre3-dev
+RUN passenger-install-nginx-module --auto --auto-download --prefix=/opt/nginx
 
 ENV PORT 3000
 
 COPY bin/web /app/bin/web
 COPY conf/convox.rb /app/config/initializers/convox.rb
-COPY conf/nginx.conf /etc/nginx/nginx.conf
+# COPY conf/nginx.conf /etc/nginx/nginx.conf
 
 CMD ["bin/web"]
