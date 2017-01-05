@@ -12,6 +12,7 @@ RUN apt-get install -yy wget curl
 RUN apt-get install -yy libcurl4-openssl-dev
 RUN apt-get install -yy libpcre3-dev
 RUN passenger-install-nginx-module --auto --auto-download --prefix=/opt/nginx
+RUN service nginx restart & passenger-config compile-nginx-engine
 
 ENV PORT 3000
 
